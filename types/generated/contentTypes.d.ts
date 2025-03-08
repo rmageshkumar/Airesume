@@ -555,6 +555,7 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     experience: Schema.Attribute.Component<'experience.experience', true>;
     firstName: Schema.Attribute.String;
     jobTitle: Schema.Attribute.String;
+    language: Schema.Attribute.Component<'language.language', false>;
     lastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

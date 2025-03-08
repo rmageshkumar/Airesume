@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_language_languages",
+  "info": {
+    "displayName": "Language",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "proficiency": {
+      "type": "enumeration",
+      "enum": [
+        "Native/Bilingual",
+        "Fluent",
+        "Advanced",
+        "Intermediate",
+        "Basic"
+      ],
+      "default": "Intermediate"
+    }
+  }
+}

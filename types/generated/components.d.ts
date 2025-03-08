@@ -35,6 +35,20 @@ export interface ExperienceExperience extends Struct.ComponentSchema {
   };
 }
 
+export interface LanguageLanguage extends Struct.ComponentSchema {
+  collectionName: 'components_language_languages';
+  info: {
+    displayName: 'Language';
+    icon: 'earth';
+  };
+  attributes: {
+    proficiency: Schema.Attribute.Enumeration<
+      ['Native/Bilingual', 'Fluent', 'Advanced', 'Intermediate', 'Basic']
+    > &
+      Schema.Attribute.DefaultTo<'Intermediate'>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -114,6 +128,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'education.education': EducationEducation;
       'experience.experience': ExperienceExperience;
+      'language.language': LanguageLanguage;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
