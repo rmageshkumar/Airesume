@@ -38,10 +38,12 @@ export interface ExperienceExperience extends Struct.ComponentSchema {
 export interface LanguageLanguage extends Struct.ComponentSchema {
   collectionName: 'components_language_languages';
   info: {
+    description: '';
     displayName: 'Language';
     icon: 'earth';
   };
   attributes: {
+    language: Schema.Attribute.String;
     proficiency: Schema.Attribute.Enumeration<
       ['Native/Bilingual', 'Fluent', 'Advanced', 'Intermediate', 'Basic']
     > &
