@@ -72,7 +72,7 @@
     },
     "language": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "language.language"
     }
   }
