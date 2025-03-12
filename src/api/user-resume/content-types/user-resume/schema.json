@@ -74,6 +74,11 @@
       "type": "component",
       "repeatable": true,
       "component": "language.language"
+    },
+    "certifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "certifications.certifications"
     }
   }
 }
