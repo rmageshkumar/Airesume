@@ -79,6 +79,11 @@
       "type": "component",
       "repeatable": true,
       "component": "certifications.certifications"
+    },
+    "customSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom-section.custom-section"
     }
   }
 }
