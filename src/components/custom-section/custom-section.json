@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_custom_section_custom_sections",
+  "info": {
+    "displayName": "Custom Section",
+    "description": "Additional resume sections like awards, projects, etc."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "awards",
+        "references",
+        "activities",
+        "internships",
+        "courses",
+        "projects",
+        "publications",
+        "volunteer",
+        "custom"
+      ],
+      "required": true,
+      "default": "custom"
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

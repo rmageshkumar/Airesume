@@ -554,6 +554,10 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    customSections: Schema.Attribute.Component<
+      'custom-section.custom-section',
+      true
+    >;
     education: Schema.Attribute.Component<'education.education', true>;
     email: Schema.Attribute.String;
     experience: Schema.Attribute.Component<'experience.experience', true>;

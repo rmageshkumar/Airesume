@@ -15,6 +15,34 @@ export interface CertificationsCertifications extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomSectionCustomSection extends Struct.ComponentSchema {
+  collectionName: 'components_custom_section_custom_sections';
+  info: {
+    description: 'Additional resume sections like awards, projects, etc.';
+    displayName: 'Custom Section';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<
+      [
+        'awards',
+        'references',
+        'activities',
+        'internships',
+        'courses',
+        'projects',
+        'publications',
+        'volunteer',
+        'custom',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'custom'>;
+  };
+}
+
 export interface EducationEducation extends Struct.ComponentSchema {
   collectionName: 'components_education_educations';
   info: {
@@ -144,6 +172,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'certifications.certifications': CertificationsCertifications;
+      'custom-section.custom-section': CustomSectionCustomSection;
       'education.education': EducationEducation;
       'experience.experience': ExperienceExperience;
       'language.language': LanguageLanguage;
